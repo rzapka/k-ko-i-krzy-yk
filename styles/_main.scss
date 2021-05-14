@@ -1,0 +1,124 @@
+.fa-circle {
+    color: $circle-color;
+}
+.fa-times {
+    color: $x-color;
+}
+.main {
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height:80%;
+    width:100%;
+    &__form {
+        height:66.6%;
+        width:40%;
+        @media (orientation: portrait) {width: 100%; text-align: center; height: 30%}
+        @media (orientation: portrait) and (min-width:280px) {width: 70%; margin-top: -5%;}
+
+        .form__message {
+            display:block;
+            font-family: $main-font;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom:10%;
+        }
+        .form__first-player {
+            .fa-circle {
+                font-size: 1.9rem;
+                margin-right:5%;
+            }
+        }
+        .form__second-player {
+            .fa-times {
+                font-size: 2.5rem;
+                margin-right:5%;
+            }
+        }
+        .break {
+            display:block;
+            margin-top:10%;
+        }
+        .form__input {
+            outline-style: none;
+            width:50%;
+            border:none;
+            padding-bottom:2%;
+            border-bottom: 2px solid #666;
+            font-size: 1.3rem;
+
+            &:nth-of-type(1):focus {
+                border-bottom-color: $circle-color;
+            }
+            &:nth-of-type(2):focus {
+                border-bottom-color: $x-color;
+            }
+        }
+        .submit {
+            display:block;
+            background-color: lighten($color: $main-color, $amount: 10%);
+            border:none;
+            color:white;
+            margin:0 15%;
+            @media (orientation: portrait) { margin: 0 auto; }
+            @media (orientation: portrait) and (min-width:540px) {margin-top: 0;}
+            text-align: center;
+            padding: 3% 8%;
+            width: 35%;
+            font-size: 1.2rem;
+            cursor:pointer;
+            transition: 0.3s;
+            &:hover {
+                background-color: $main-color;
+            }
+        }
+    }
+    &__area {
+        @include mq(smartphone) {height: 50vh; width: 50vh}
+        @include mq(tablet-large) {height: 60vh; width: 60vh}
+        @include mq(desktop-small) {height: 70vh; width: 70vh}
+        @media (orientation: portrait) {height: 35vh; width: 35vh; margin-left:7%;}
+        display:flex;
+        flex-wrap: wrap;
+        .field {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6rem;
+            height: 33.3%;
+            flex-basis:30%;
+            border: 1px solid #666;
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+    .circle-turn, .x-turn  {
+        position:absolute;
+        top: 15%;
+        left:8%;
+        @include mq(desktop-small) {left: 2%;}
+        @media (orientation:portrait) {left: 50%; transform: translateX(-50%)}
+        p {
+            font-family: $main-font;
+            font-size: 2rem;
+            span {
+                font-family: $logo-font;
+                color: $circle-color;
+            }
+        }
+    }
+    .x-turn {
+        left: 68%;
+        @include mq(desktop-small) {left: 73%;}
+        @media (orientation:portrait) {left: 50%; transform: translateX(-50%)}
+        p {
+            span {
+                color: $x-color;
+            }
+        }
+        
+    }
+}

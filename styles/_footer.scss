@@ -1,0 +1,13 @@
+.footer {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom: 0;
+    height:12%;
+    background-color: $main-color;
+
+    &__upper {
+        height:33.3%;
+        background-color: lighten($color: $main-color, $amount: 10%);
+    }
+}

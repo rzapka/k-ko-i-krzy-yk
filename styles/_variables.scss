@@ -1,0 +1,28 @@
+$main-color: #687c87;
+$logo-font: 'Ultra', serif;
+$main-font: 'Montserrat', sans-serif;
+$circle-color: rgb(0, 119, 255);
+$x-color: rgb(204, 0, 255);
+
+
+$breakpoints : (
+    smartphone: (min-width: 460px),
+    smartphone-large: (min-width: 640px),
+    tablet: (min-width: 800px),
+    tablet-large: (min-width:1024px),
+    desktop-small: (min-width: 1280px),
+    desktop-medium: (min-width: 1600px),
+    desktop-large: (min-width: 1900px)
+);
+@mixin mq($breakpoint) {
+    $size: map-get($breakpoints, $breakpoint);
+
+    @if ($size) {
+        @media #{$size} {
+            @content;
+        }
+    }@else {
+        @error"'#{$breakpoint}' - Nie ma takiej wielkości";
+    }
+}
+

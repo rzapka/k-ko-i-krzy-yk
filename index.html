@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kółko i krzyżyk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ultra&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/index.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header__logo">
+        <img src="images/logo.png" alt="tictactoe-logo" class="header__logo--img">
+        <h1 class="header__logo--h1">tic-tac-toe</h1>
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li><a href="index.html">reset</a></li>
+          <li><a href="instruction.html">instrukcja</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form action="" class="main__form">
+        <label class="form__message">Wprowadź nazwę graczy: (max. 15 znaków)</label>
+        <label class="form__first-player"><span class="far fa-circle"></span></label>
+        <input type="text" class="form__input form__input--circle" placeholder="Pierwszy gracz.. (kółko)" required>
+        <span class="break"></span>
+        <label class="form__second-player"><span class="fas fa-times"></span></span></label>
+        <input type="text" class="form__input form__input--x" placeholder="Drugi gracz.. (krzyżyk)" required>
+        <span class="break"></span>
+        <input type="submit" value="Zatwierdź" class="submit">
+      </form>
+      <div class="main__area">
+        <div class="field" index="0"></div>
+        <div class="field" index="1"></div>
+        <div class="field" index="2"><span class="far fa-circle"></span></div>
+        <div class="field" index="3"><span class="fas fa-times"></span></div>
+        <div class="field" index="4"></div>
+        <div class="field" index="5"></div>
+        <div class="field" index="6"></div>
+        <div class="field" index="7"></div>
+        <div class="field" index="8"><span class="far fa-circle"></span></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__upper"></div>
+    </footer>
+  </div>
+  <script src="https://kit.fontawesome.com/9e7d514733.js" crossorigin="anonymous"></script>
+  <script src="scripts/GameLogic.js"></script>
+  <script src="scripts/GameController.js"></script>
+</body>
+
+</html>

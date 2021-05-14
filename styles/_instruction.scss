@@ -1,0 +1,26 @@
+.instruction {
+    text-align: center;
+    font-family: $main-font;
+    * {
+        margin-bottom: 3%;
+    }
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        
+    }
+    h2:nth-of-type(1) {
+        font-size: 2rem;
+        color:red;
+    }
+    h2:nth-of-type(2) {
+        margin-top:3%;
+        font-size: 2rem;
+        color:green;
+    }
+    p {
+        margin: 0 auto;
+        font-size: 1.3rem;
+        width:80%;
+    }
+}

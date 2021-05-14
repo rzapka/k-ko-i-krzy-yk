@@ -1,0 +1,73 @@
+.popup-bg {
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.7);
+    .popup {
+        position:absolute;
+        box-sizing: border-box;
+        top:50%;
+        left:50%;
+        padding: 3% 0;
+        transform: translate(-50%, -50%);
+        height: 70%;
+        width: 30%;
+        @include mq(smartphone) {width:20%; padding: 5% 2%;}
+        @media (orientation: portrait) {height: 50%; width: 50%}
+        background-color: #fff;
+        img {
+            width:50%;
+        }
+       p {
+           text-align: center;
+           font-family: $main-font;
+           font-size: 2rem;
+           .cir {
+            font-family: $logo-font;
+            color: $circle-color;
+           }
+           .x {
+                font-family: $logo-font;
+               color: $x-color;
+           }
+           strong {
+               margin-top:5%;
+               display:block;
+               font-family: $main-font;
+               font-weight: bold;
+               font-style: italic;
+           }
+       }
+       img {
+           display:block;
+           margin:5% auto;
+       }
+       .play-again {
+        display:block;
+        background-color: lightseagreen;
+        border:none;
+        color:white;
+        font-family: $main-font;
+        margin:0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 3% 7%;
+        width: 35%;
+        font-size: 1.2rem;
+        cursor:pointer;
+        transition: 0.3s;
+        margin-top:6%;
+        @include mq(smartphone) {width: 60%; margin-top: 30%}
+        @media (orientation: portrait) {width: 60%;}
+        @media (orientation: portrait) and (min-width:280px) {margin-top: 7%;}
+        @media (orientation: portrait)and (min-width:360px) {margin-top:15%;}
+       }
+    }
+}

@@ -1,0 +1,51 @@
+.header {
+    display:flex;
+    align-items: center;
+    height: 8%;
+    background-color: $main-color;
+    padding: 0 5%;
+    font-family: $main-font;
+    .header__logo {
+        display:flex;
+        height:100%;
+        width:22%;
+        justify-content: space-between;
+        align-items: center;
+        
+        .header__logo--img {
+            height: 66%;
+            margin-right: 10%;
+        }
+        .header__logo--h1 {
+            font-family: $logo-font;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            color: #333;
+            font-style: italic;
+        }
+    }
+    .header__nav {
+        flex-basis:100%;
+        text-align: right;
+        ul {
+            li {
+                display:inline-block;
+                @include mq(smartphone-large) {width: 15%}
+                @media (orientation:portrait) {width: 25%;}
+                width:10%;
+                margin-right: 3%;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    background-color: darken($main-color, 15%);
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width:100%;
+                    padding: 7% 0;
+                    color:#ddd;    
+                }
+            }
+        }
+    }
+}
