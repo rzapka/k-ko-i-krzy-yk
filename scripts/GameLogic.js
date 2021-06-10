@@ -72,7 +72,7 @@ class GameLogic {
         cells[2] == 'O' && cells[2] == cells[4] && cells[4] == cells[6]) {
             return 'o wins';
        
-        } else if (cells[0] == 'O' && cells[0] == cells[1] && cells[1] == cells[2] ||
+        } else if (cells[0] == 'X' && cells[0] == cells[1] && cells[1] == cells[2] ||
             cells[3] == 'X' && cells[3] == cells[4] && cells[4] == cells[5] ||
             cells[6] == 'X' && cells[6] == cells[7] && cells[7] == cells[8] ||
             cells[0] == 'X' && cells[0] == cells[3] && cells[3] == cells[6] ||
